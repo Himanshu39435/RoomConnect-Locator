@@ -157,6 +157,11 @@ export async function registerRoutes(
       ];
 
       for (let i = 0; i < locations.length; i++) {
+        let imageUrl = roomImages[i];
+        if (locations[i] === "Delhi North") {
+          imageUrl = "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?w=800&q=80"; // Specifically chosen high-quality room for Delhi North
+        }
+
         await storage.createListing({
           title: `Modern Room in ${locations[i]}`,
           description: `A comfortable and well-maintained living space located in ${locations[i]}. Close to essential services and transport.`,
@@ -164,7 +169,7 @@ export async function registerRoutes(
           price: 1000 + (i * 200),
           propertyType: i % 2 === 0 ? "1 BHK" : "2 BHK",
           tenantPreference: i % 3 === 0 ? "Bachelor" : (i % 3 === 1 ? "Family" : "Working"),
-          imageUrls: [roomImages[i]],
+          imageUrls: [imageUrl],
           contactPhone: `+91${9000000000 + i}`,
           ownerId: "demo-user",
         });
