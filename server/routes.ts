@@ -137,10 +137,23 @@ export async function registerRoutes(
         ownerId: "demo-user",
       });
 
-      // Additional 10 rooms
+      // Additional 10 rooms with better images
       const locations = [
         "Delhi", "Dehradun", "Uttarakhand", "Haridwar", "Rishikesh", 
         "Clement Town", "Noida", "Delhi North", "Dehradun Heights", "Noida Sector 62"
+      ];
+
+      const roomImages = [
+        "https://images.unsplash.com/photo-1598928506311-c55ded91a20c?w=800&q=80",
+        "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80",
+        "https://images.unsplash.com/photo-1554995207-c18c203602cb?w=800&q=80",
+        "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=800&q=80",
+        "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80",
+        "https://images.unsplash.com/photo-1617103996702-96ff29b1c467?w=800&q=80",
+        "https://images.unsplash.com/photo-1616137422495-1e9e46e2aa77?w=800&q=80",
+        "https://images.unsplash.com/photo-1615876234886-fd9a39faa97f?w=800&q=80",
+        "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=800&q=80",
+        "https://images.unsplash.com/photo-1631679706909-1844bbd07221?w=800&q=80"
       ];
 
       for (let i = 0; i < locations.length; i++) {
@@ -151,7 +164,7 @@ export async function registerRoutes(
           price: 1000 + (i * 200),
           propertyType: i % 2 === 0 ? "1 BHK" : "2 BHK",
           tenantPreference: i % 3 === 0 ? "Bachelor" : (i % 3 === 1 ? "Family" : "Working"),
-          imageUrls: [`https://images.unsplash.com/photo-${1500000000000 + i}?w=800&q=80`],
+          imageUrls: [roomImages[i]],
           contactPhone: `+91${9000000000 + i}`,
           ownerId: "demo-user",
         });
