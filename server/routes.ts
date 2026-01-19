@@ -136,6 +136,26 @@ export async function registerRoutes(
         contactPhone: "+1987654321",
         ownerId: "demo-user",
       });
+
+      // Additional 10 rooms
+      const locations = [
+        "Delhi", "Dehradun", "Uttarakhand", "Haridwar", "Rishikesh", 
+        "Clement Town", "Noida", "Delhi North", "Dehradun Heights", "Noida Sector 62"
+      ];
+
+      for (let i = 0; i < locations.length; i++) {
+        await storage.createListing({
+          title: `Modern Room in ${locations[i]}`,
+          description: `A comfortable and well-maintained living space located in ${locations[i]}. Close to essential services and transport.`,
+          location: locations[i],
+          price: 1000 + (i * 200),
+          propertyType: i % 2 === 0 ? "1 BHK" : "2 BHK",
+          tenantPreference: i % 3 === 0 ? "Bachelor" : (i % 3 === 1 ? "Family" : "Working"),
+          imageUrls: [`https://images.unsplash.com/photo-${1500000000000 + i}?w=800&q=80`],
+          contactPhone: `+91${9000000000 + i}`,
+          ownerId: "demo-user",
+        });
+      }
       console.log("Database seeded successfully");
     }
   } catch (error) {
