@@ -4,6 +4,7 @@ import { useListings, useDeleteListing } from "@/hooks/use-listings";
 import { Navbar } from "@/components/Navbar";
 import { ListingCard } from "@/components/ListingCard";
 import { ListingFormDialog } from "@/components/ListingFormDialog";
+import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { 
   Plus, 
@@ -154,6 +155,7 @@ export default function Dashboard() {
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
+      <Footer />
     </div>
   );
 }

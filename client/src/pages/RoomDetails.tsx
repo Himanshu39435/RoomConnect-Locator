@@ -1,6 +1,7 @@
 import { useParams, Link } from "wouter";
 import { useListing } from "@/hooks/use-listings";
 import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { 
@@ -205,6 +206,7 @@ export default function RoomDetails() {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   );
 }

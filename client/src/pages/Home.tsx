@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Navbar } from "@/components/Navbar";
 import { ListingCard } from "@/components/ListingCard";
+import { Footer } from "@/components/Footer";
 import { useListings } from "@/hooks/use-listings";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -192,6 +193,7 @@ export default function Home() {
           </div>
         )}
       </main>
+      <Footer />
     </div>
   );
 }
