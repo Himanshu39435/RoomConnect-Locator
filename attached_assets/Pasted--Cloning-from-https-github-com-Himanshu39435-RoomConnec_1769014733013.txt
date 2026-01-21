@@ -1,0 +1,49 @@
+==> Cloning from https://github.com/Himanshu39435/RoomConnect-Locator
+==> Checking out commit caac1b1583a19797d435a77e299698b804a27739 in branch main
+==> Downloaded 143MB in 2s. Extraction took 3s.
+==> Using Node.js version 22.22.0 (default)
+==> Docs on specifying a Node.js version: https://render.com/docs/node-version
+==> Running build command 'npm install'...
+up to date, audited 391 packages in 899ms
+64 packages are looking for funding
+  run `npm fund` for details
+found 0 vulnerabilities
+==> Uploading build...
+==> Uploaded in 4.5s. Compression took 2.8s
+==> Build successful 🎉
+==> Setting WEB_CONCURRENCY=1 by default, based on available CPUs in the instance
+==> Deploying...
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async <anonymous> (/opt/render/project/src/node_modules/src/node-postgres/session.ts:104:19)
+    at async AuthStorage.getUser (/opt/render/project/src/server/replit_integrations/auth/storage.ts:14:20)
+    at async registerRoutes (/opt/render/project/src/server/routes.ts:100:22)
+    at async <anonymous> (/opt/render/project/src/server/index.ts:71:3) {
+  length: 105,
+  severity: 'ERROR',
+  code: '42P01',
+  detail: undefined,
+  hint: undefined,
+  position: '103',
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'parse_relation.c',
+  line: '1449',
+  routine: 'parserOpenTable'
+}
+Static build not found at /opt/render/project/src/server/public. Skipping static serving.
+4:45:19 PM [express] serving on port 10000
+==> Your service is live 🎉
+==> 
+==> ///////////////////////////////////////////////////////////
+==> 
+==> Available at your primary URL https://room-connect-locator-backend-ta1q.onrender.com
+==> 
+==> ///////////////////////////////////////////////////////////
+==> Detected service running on port 10000
+==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
