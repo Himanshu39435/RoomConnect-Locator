@@ -37,3 +37,33 @@ RoomConnect Locator is a full-stack web application designed to simplify the pro
 
 ## 6. Deployment Strategy
 The application is configured for deployment on Render, with automated database migration scripts included in the build process to ensure zero-downtime schema updates.
+
+## 7. User Interaction Flowchart (Text Representation)
+[Start: Landing Page]
+       |
+       v
+[Login / Signup (Replit Auth)]
+       |
+       +---(Role: Finder)---[Search & Filter Rooms]
+       |                           |
+       |                           v
+       |                    [View Room Details]
+       |
+       +---(Role: Owner)----[Owner Dashboard]
+                                   |
+                                   +---[Add New Room]
+                                   |
+                                   +---[Edit Listing]
+                                   |
+                                   +---[Delete Listing]
+
+## 8. Technical Architecture Diagram (Logic Flow)
+[Frontend: React/Vite/Tailwind]
+       ^             |
+       | (API)       | (UI State)
+       v             v
+[Backend: Express.js API] <---[Auth: Replit Auth]
+       ^             |
+       | (SQL)       | (Drizzle ORM)
+       v             v
+[Database: PostgreSQL (Neon)]
