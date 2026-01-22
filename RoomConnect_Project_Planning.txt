@@ -1,0 +1,39 @@
+# PROJECT REPORT: RoomConnect Locator (Room Finder Website)
+
+## 1. Project Brief
+RoomConnect Locator is a full-stack web application designed to simplify the process of finding and listing rental rooms. It serves two primary user roles: Owners, who can list and manage properties, and Finders, who can search and filter for their ideal living space.
+
+## 2. Key Features
+- **Secure Authentication**: Role-based access for Owners and Finders.
+- **Owner Dashboard**: Full CRUD (Create, Read, Update, Delete) capabilities for room listings.
+- **Finder Search**: Advanced filtering by location, price, and property type.
+- **Responsive UI**: Optimized for both mobile and desktop users.
+
+## 3. Technical Architecture
+- **Frontend**: Built with React and TypeScript, using Tailwind CSS for styling and Shadcn UI for high-quality components.
+- **Backend**: A Node.js and Express.js server providing a robust RESTful API.
+- **Database**: PostgreSQL (Neon.tech) for reliable relational data storage.
+- **ORM**: Drizzle ORM for type-safe database interactions and automated migrations.
+- **State Management**: TanStack Query for efficient server-state handling.
+
+## 4. Database Schema
+### Users Table
+- id (Primary Key)
+- email (Unique)
+- first_name, last_name
+- role (Finder/Owner)
+
+### Listings Table
+- id (Primary Key)
+- title, description, location
+- price (Integer)
+- property_type, tenant_preference
+- owner_id (Foreign Key referencing Users)
+
+## 5. Design Rationale
+- **PostgreSQL**: Selected for its data integrity and support for complex relationships.
+- **Tailwind CSS**: Chosen to enable rapid UI development while maintaining a clean, modern aesthetic.
+- **Drizzle ORM**: Used to bridge the gap between TypeScript and SQL, ensuring code reliability.
+
+## 6. Deployment Strategy
+The application is configured for deployment on Render, with automated database migration scripts included in the build process to ensure zero-downtime schema updates.
